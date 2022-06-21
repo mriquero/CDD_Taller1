@@ -26,7 +26,7 @@ def canalesSinTraslape():
 		if i!=canal1-1 and i!=canal2-1:
 			e,f=rangosCanales[i]
 			#print(e,f)
-			if not(((e>a and e<b) or (f>a and f<b)) or ((e>c and d<b) or (f>c and f<d))):
+			if not(((e>a and e<b) or (f>a and f<b)) or ((e>c and e<d) or (f>c and f<d))):
 				listaNoTraslape.append(i+1)
 				print(i+1)
 ####
