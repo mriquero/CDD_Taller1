@@ -36,6 +36,6 @@ def canalesSinTraslape():
 opcion1 = 0
 while opcion1!=3:
 	#print('*****Estimacion de tasa de datos (data rate) en base al PHY seleccionado***** \nEliga la banda que desea utilizar \n1) 2.4GHz \n2) 5GHz \n3) Salir')
-	opcion1= int(input("*****Estimacion de tasa de datos (data rate) en base al PHY seleccionado***** \nEliga la banda que desea utilizar \n1) 2.4GHz \n2) 5GHz \n3) Salir \nR: "))
+	opcion1= int(input("*****Estimacion de tasa de datos (data rate) en base al PHY seleccionado***** \nElija la banda que desea utilizar \n1) 2.4GHz \n2) 5GHz \n3) Salir \nR: "))
 	if opcion1==1:
 		canalesSinTraslape()
