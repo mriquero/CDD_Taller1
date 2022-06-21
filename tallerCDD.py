@@ -51,7 +51,7 @@ def calcularSNR():
 def calcularColor(snr,app):
 	valoresSNRRecomendados = [15,25,30]
 	print("El valor SNR es: "+str(snr))
-	snrRecomendado = valoresSNRRecomendados[app]
+	snrRecomendado = valoresSNRRecomendados[app-1]
 
 	if snr==snrRecomendado:
 		print("El mensaje de alerta es:"+'\033[92m' + "OK"+'\033[0m')
