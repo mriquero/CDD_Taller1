@@ -60,7 +60,7 @@ def calcularSNR():
 
 
 
-"""#Funcion para establecer para la salida dependiendo del valor de SNR
+#Funcion para establecer para la salida dependiendo del valor de SNR
 def calcularColor(snr,app):
 	valoresSNRRecomendados = [15,25,30]
 	print("El valor SNR es: "+str(snr))
@@ -74,22 +74,6 @@ def calcularColor(snr,app):
 		return snr
 	else:
 		print("El mensaje de alerta es:"+'\033[91m'+"Negacion"+'\033[0m')
-		return snr"""
-
-
-#Funcion para establecer para la salida dependiendo del valor de SNR
-def calcularColor(snr):
-	valoresSNRRecomendados = [15,25,30]
-	print("El valor SNR es: "+str(snr))
-
-	if snr in valoresSNRRecomendados:
-		print("El mensaje de alerta es:"+'\033[1;92m' + " OK "+'\033[1;0m')
-		return snr
-	elif (snr == valoresSNRRecomendados[0]-2) or (snr == valoresSNRRecomendados[1]-2) or (snr == valoresSNRRecomendados[2]-2):
-		print("El mensaje de alerta es:"+'\033[1;93m'+" ADVERTENCIA "+'\033[1;0m')
-		return snr
-	else:
-		print("El mensaje de alerta es:"+'\033[1;91m'+" NEGACION "+'\033[1;0m')
 		return snr
 
 
@@ -126,8 +110,7 @@ while opcion1!=3:
 		while(estandar not in [1,2]):
 			estandar = int(input("Elija el estandar que desea usar:\n1) 802.11b\n2) 802.11g\nR: "))
 		snr,posVRecomendado = calcularSNR()
-		#calcularColor(snr,posVRecomendado)
-		calcularColor(snr)
+		calcularColor(snr,posVRecomendado)
 		datarate = calcularDataRate(snr)
 		print("El datarate segun el SNR estimado es "+datarate)
 
@@ -135,8 +118,7 @@ while opcion1!=3:
 		canalesPara5G()
 		print("El estandar a usar es: 802.11a")
 		snr, posVRecomendado = calcularSNR()
-		#calcularColor(snr, posVRecomendado)
-		calcularColor(snr)
+		calcularColor(snr, posVRecomendado)
 		datarate5G = calcularDataRate5G(snr)
 		print("El datarate segun el SNR estimado es "+datarate5G)
 
